@@ -31,6 +31,7 @@ jobs:
       run: msbuild PInvoke.sln /t:Build /p:Configuration=Release
 
     - name: Upload build artifacts
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: build-folder
