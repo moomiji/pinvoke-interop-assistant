@@ -25,7 +25,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Restore the application
-      run: msbuild PInvoke.sln /t:Restore /p:Configuration=Release
+      run: msbuild PInvoke.sln /t:Build /p:Configuration=Release
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
